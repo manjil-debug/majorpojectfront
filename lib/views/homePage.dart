@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:bootstrapped/routes/routes.dart' as route;
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,10 +11,10 @@ class HomePage extends StatelessWidget {
         title: Text('Home page'),
       ),
       body: Center(
-        child: RaisedButton(
-          child: Text('Open route'),
+        child: ElevatedButton(
+          child: Text('Go to settings'),
           onPressed: () {
-            Navigator.pushReplacementNamed(context, "/setting");
+            Navigator.pushNamed(context, route.settingsPage);
           },
         ),
       ),
